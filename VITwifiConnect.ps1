@@ -1,8 +1,8 @@
 $webRequest = Invoke-WebRequest -Uri 'http://phc.prontonetworks.com/cgi-bin/authlogin?URI=http://captive.apple.com/hotspot-detect.html' -SessionVariable webSession
 Write-Output($webRequest)
 Write-Output($webRequest.Forms)
-[string]$userName = '21BDS0198'
-[string]$userPassword = 'RP576Z'
+[string]$userName = ''
+[string]$userPassword = ''
 [securestring]$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
 [pscredential]$credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
 $loginForm = @{
